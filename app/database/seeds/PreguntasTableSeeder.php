@@ -14,32 +14,74 @@ class PreguntasTableSeeder extends Seeder
     {
         //carga de datos
 		Preguntas::create([
-			'pregunta' => 'Hay plata? Tenemos plata? Danos plata! Plata plata plata',
+			'pregunta' => 'Hay suficiente dinero para financiar un viaje a la costa este de la galaxia Neymar?',
 			'respondida' => false,
 			'respuesta'=> null,
 			'id_categoria'=>1,
 			'id'=>1
 		]);
 		Preguntas::create([
-			'pregunta' => 'Puedo ser el ministro del aguante todo?',
+			'pregunta' => 'Me gustaría crear el ministerio de "No Hay problema" y ser su ministro. Es esto viable?',
 			'respondida' => false,
 			'respuesta'=> null,
 			'id_categoria'=>2,
-			'id'=>1
+			'id'=>2
 		]);
 		Preguntas::create([
-			'pregunta' => 'Vamos a colonizar marte?',
+			'pregunta' => 'Puedo llamar a casa?',
 			'respondida' => true,
-			'respuesta'=> 'Sí, sí vamos!',
-			'id_categoria'=>3,
-			'id'=>1
+			'respuesta'=> 'Ño.',
+			'id_categoria'=>5,
+			'id'=>3
 		]);
 		Preguntas::create([
-			'pregunta' => 'Aguante todo?',
+			'pregunta' => 'Conquistar marte posibilidades hay de?',
 			'respondida' => false,
 			'respuesta'=> null,
-			'id_categoria'=>2,
-			'id'=>1
+			'id_categoria'=>3,
+			'id'=>4
 		]);
+		Preguntas::create([
+			'pregunta' => 'Qué necesitaríamos para organizar una fiesta con chicas humanas?',
+			'respondida' => true,
+			'respuesta'=> 'Ño.',
+			'id_categoria'=>4,
+			'id'=>7
+		]);
+		Preguntas::create([
+			'pregunta' => 'Si hubiese mundos paralelos, podríamos conquistarlos?',
+			'respondida' => true,
+			'respuesta'=> 'Ya los hemos conquistado o los estamos conquistando ahora o los estaremos conquistando en el futuro... O todo al mismo tiempo.',
+			'id_categoria'=>3,
+			'id'=>6
+		]);
+		Preguntas::create([
+			'pregunta' => 'Puedo infiltrarme en la tierra? De disfraz se me ocurre usar un par de anteojos',
+			'respondida' => true,
+			'respuesta'=> null,
+			'id_categoria'=>4,
+			'id'=>5
+		]);
+		Preguntas::create([
+			'pregunta' => 'Hay problemas?',
+			'respondida' => true,
+			'respuesta'=> null,
+			'id_categoria'=>5,
+			'id'=>2
+		]);
+		Preguntas::create([
+			'pregunta' => 'Si la inflamación no se va, el dolor vuelve?',
+			'respondida' => true,
+			'respuesta'=> null,
+			'id_categoria'=>5,
+			'id'=>6
+		]);
+		Preguntas::create([
+			'pregunta' => 'Comprarme un nuevo sable quiero. Hay plata?',
+			'respondida' => true,
+			'respuesta'=> null,
+			'id_categoria'=>1,
+			'id'=>4
+		]);												
     }
 }

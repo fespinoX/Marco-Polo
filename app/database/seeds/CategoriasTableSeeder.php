@@ -20,7 +20,7 @@ class CategoriasTableSeeder extends Seeder
 			'categoria' => 'Política'		
 		]);
 		Categorias::create([
-			'categoria' => 'Conquistas'		
+			'categoria' => 'Invasiones'		
 		]);
 		Categorias::create([
 			'categoria' => 'Humanos'		
