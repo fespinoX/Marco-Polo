@@ -13,12 +13,16 @@ Marco Polo
 ?>
 
 @section('contenido')
-  <h1>Marco Polo</h1>
-  <p>Nomonomnomnomnomnom</p>
 
-<h2>Preguntas pendientes</h2>
 
-@foreach($preguntas as $singlePregunta)
+<section id="preguntas">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4 text-right">
+        <h1>Preguntas pendientes</h1>
+      </div>
+      <div class="col-md-4 text-left">
+        @foreach($preguntas as $singlePregunta)
 @if ($singlePregunta->respondida == false)
 <div>
   <div>
@@ -35,6 +39,10 @@ Marco Polo
 </div>
 @endif
 @endforeach
+      </div>
+    </div>
+  </div>
+</section>
 
 
 
@@ -57,5 +65,7 @@ Marco Polo
 </div>
 @endif
 @endforeach
+
+
 
 @stop

@@ -1,0 +1,65 @@
+/* COLOR GUIDE */
+
+/*
+
+violeta: #512549;
+violeta claro: #92657C;
+amarillo: #EFB247;
+ocre: #CD8800;
+verde: #038D80;
+verde oscuro: #01655B;
+blanco: #E7D7B3;
+negro: #161511;
+
+*/
+
+
+* {
+    font-family: 'the_light_fontregular';
+}
+
+
+h1{
+    font-family: 'space_comicsregular';
+    text-transform: uppercase;
+    line-height: 60px;
+}
+
+.navbar a{
+    display: inline-block;
+}
+
+#cover {
+    height: calc( 100vh - 55px );
+    background-image: url('../img/bg-index.jpg');
+}
+
+#cover .cont {
+    position: absolute;
+    top: 40%;
+}
+
+#cover .cont h1{
+    font-size: 80px;
+    line-height: 120px;
+    text-align: center;
+    color: #E7D7B3;
+    text-shadow: 15px 15px 0px #EFB247;
+}
+
+#cover .cont p{
+    margin-top: 50px;
+    font-size: 30px;
+    text-align: center;
+    color: #EFB247;
+}
+
+
+#preguntas {
+    height: calc( 100vh - 55px );
+    background-image: url('../img/bg-preguntas.jpg');
+}
+
+
+
+
