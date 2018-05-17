@@ -12,7 +12,7 @@ class RolesTableSeeder extends Seeder
      */
     public function run()
     {
-        //carga de datos
+
 		Roles::create([
 			'rol' => 'Presidente'		
 		]);

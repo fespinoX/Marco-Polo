@@ -1,10 +1,3 @@
-<?php
-/*
-La directiva extends permite tomar otro template de base.
-La directiva "section" permite definir el contenido a
-ubicar dentro de algún "yield" del template extendido.
-*/
-?>
 @extends('layout.main')
 @section('title')
 Marco Polo

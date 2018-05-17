@@ -12,8 +12,6 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        //usuarios iniciales
-		
 
 		User::create([
 			'name' => 'Kodos',

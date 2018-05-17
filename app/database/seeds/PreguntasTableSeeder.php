@@ -12,7 +12,7 @@ class PreguntasTableSeeder extends Seeder
      */
     public function run()
     {
-        //carga de datos
+
 		Preguntas::create([
 			'pregunta' => 'Hay suficiente dinero para financiar un viaje a la costa este de la galaxia Neymar?',
 			'respondida' => false,

@@ -12,7 +12,7 @@ class CategoriasTableSeeder extends Seeder
      */
     public function run()
     {
-        //carga de datos
+
 		Categorias::create([
 			'categoria' => 'Economía'		
 		]);
