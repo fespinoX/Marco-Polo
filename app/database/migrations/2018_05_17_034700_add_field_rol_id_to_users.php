@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class LinkIdUsersToPreguntas extends Migration
+class AddFieldRolIdToUsers extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class LinkIdUsersToPreguntas extends Migration
      */
     public function up()
     {
-        Schema::table('preguntas', function(Blueprint $table){
-            $table -> unsignedInteger('id');
-            $table -> foreign('id')->references('id')->on('users');
+        Schema::table('users', function(Blueprint $table){
+            $table -> unsignedInteger('id_rol');
+            $table -> foreign('id_rol')->references('id_rol')->on('roles');
         });
     }
 

@@ -13,26 +13,30 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         //usuarios iniciales
+		
+
 		User::create([
-			'user' => 'kodos',
-			'nombre' => 'Kodos',
+			'name' => 'kodos',
+			'email' => 'kodos@kodos.com',
 			'planeta' => 'nidea',
 			'password' => \Hash::make('123'),
 			'id_rol'=>1
 		]);
 		User::create([
-			'user' => 'alf',
-			'nombre' => 'Alf',
+			'name' => 'Alf',
+			'email' => 'Alf@alf.com',
 			'planeta' => 'Melmac',
 			'password' => \Hash::make('123'),
 			'id_rol'=>2
 		]);
 		User::create([
-			'user' => 'et',
-			'nombre' => 'ET',
+			'name' => 'ET',
+			'email' => 'et@et.com',
 			'planeta' => 'Home',
 			'password' => \Hash::make('123'),
 			'id_rol'=>2
 		]);
+
+
     }
 }

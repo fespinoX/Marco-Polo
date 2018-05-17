@@ -1,0 +1,10 @@
+Cuando queremos utilizar bloques reutilizables de HTML,
+tenemos 2 opciones:
+1. Usar includes.
+2. Usar "componentes".
+
+Los componentes son muy similares a un include, pero 
+llevan una sintaxis y nombre ligeramente distintos, para
+hacer un mapa mental más sencillo.
+
+https://laravel.com/docs/5.6/blade#components-and-slots

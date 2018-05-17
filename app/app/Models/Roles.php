@@ -19,6 +19,6 @@ class Roles extends Model
     protected $fillable = ['rol'];
 		
 	public function categoria(){
-		return $this->belongsTo(Users::class, 'id_user', 'id_user');
+		return $this->belongsTo(Users::class, 'id', 'id');
 	}
 }

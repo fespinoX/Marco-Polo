@@ -13,10 +13,10 @@ class LinkIdRolToUsers extends Migration
      */
     public function up()
     {
-        Schema::table('users', function(Blueprint $table){
+        /*Schema::table('users', function(Blueprint $table){
             $table -> unsignedInteger('id_rol');
             $table -> foreign('id_rol')->references('id_rol')->on('roles');
-        });
+        });*/
     }
 
     /**

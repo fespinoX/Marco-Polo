@@ -18,7 +18,7 @@ class CreatePreguntas extends Migration
         Schema::create('preguntas', function(Blueprint $table){
             $table->increments('id_pregunta');
             $table->string('pregunta', 100);
-            $table->boolean('respondida');
+            $table->boolean('respondida')->default(false);
             $table->text('respuesta')->nullable();
             $table->timestamps();
         });
