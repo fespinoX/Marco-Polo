@@ -1,71 +1,59 @@
 <?php
 /** @var Pregunta[] $preguntas */
 ?>
-
 @extends('layout.main')
-
 @section('title')
 Marco Polo
 @stop
-
 <?php
 //dd(Auth::user()->id_rol);
 ?>
-
 @section('contenido')
-
-
 <section id="preguntas">
   <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-4 text-right">
-        <h1>Preguntas pendientes</h1>
-      </div>
-      <div class="col-md-4 text-left">
-        @foreach($preguntas as $singlePregunta)
-@if ($singlePregunta->respondida == false)
-<div>
-  <div>
-    <p>{{ $singlePregunta->users->name }}</p>
+    <div class="row justify-content-md-center">
+      <div class="col-md-8 text-left">
+        <h2>Preguntas pendientes</h2>
 
-  </div>
-  <div>
-    <p>{{ $singlePregunta->pregunta }}</p>
-    <p>{{ $singlePregunta->categorias->categoria }}</p>
-  </div>
-  <div>
-    <a href="<?= url('preguntas/' . $singlePregunta->id_pregunta);?>">Detalle</a>
-  </div>
-</div>
-@endif
-@endforeach
+        @foreach($preguntas as $singlePregunta)
+        @if ($singlePregunta->respondida == false)
+        
+        <a class="media pregunta pendiente" href="<?= url('preguntas/' . $singlePregunta->id_pregunta);?>">
+          <div class="media-left">
+            <img src="img/profile/{{ $singlePregunta->users->foto }}" class="media-object">
+          </div>
+          <div class="media-body">
+            <h3>{{ $singlePregunta->users->name }}</h3>
+            <p class="badge">{{ $singlePregunta->categorias->categoria }}</p>
+            <p class="preg">{{ $singlePregunta->pregunta }}</p>
+          </div>
+        </a>
+        @endif
+        @endforeach
       </div>
+
+      <div class="col-md-8 text-left">
+        <h2>Preguntas respondidas</h2>
+        
+        @foreach($preguntas as $singlePregunta)
+        @if ($singlePregunta->respondida == true)
+        <a class="media pregunta respondida" href="<?= url('preguntas/' . $singlePregunta->id_pregunta);?>">
+          <div class="media-left">
+            <img src="img/profile/{{ $singlePregunta->users->foto }}" class="media-object">
+          </div>
+          <div class="media-body">
+            <h3>{{ $singlePregunta->users->name }}</h3>
+            <p class="badge">{{ $singlePregunta->categorias->categoria }}</p>
+            <p class="preg">{{ $singlePregunta->pregunta }}</p>
+          </div>
+        </a>
+      
+        @endif
+        @endforeach
+
+
     </div>
   </div>
 </section>
-
-
-
-<h2>Preguntas respondidas</h2>
-
-@foreach($preguntas as $singlePregunta)
-@if ($singlePregunta->respondida == true)
-<div>
-  <div>
-    <p>{{ $singlePregunta->users->nombre }}</p>
-
-  </div>
-  <div>
-    <p>{{ $singlePregunta->pregunta }}</p>
-    <p>{{ $singlePregunta->categorias->categoria }}</p>
-  </div>
-  <div>
-    <a href="<?= url('preguntas/' . $singlePregunta->id_pregunta);?>">Detalle</a>
-  </div>
-</div>
-@endif
-@endforeach
-
-
 
 @stop

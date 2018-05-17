@@ -10,7 +10,11 @@ Preguntame!
 @stop
 
 @section('contenido')
-  <h1>Nueva pregunta</h1>
+<section id="edit">
+  <div class="container-fluid">
+    <div class="row justify-content-md-center">
+      <div class="col-sm-6 formu">
+  <H2>Nueva pregunta</H2>
 
 
   <form action="<?= url('/preguntas/nueva');?>" method="post">
@@ -48,6 +52,10 @@ Preguntame!
 
 
 
-  	<button class="btn btn-primary">Crear</button>
+  	<button class="btn btn-primario">Crear</button>
   </form>
+        </div>
+    </div>
+  </div>
+</section>
 @stop

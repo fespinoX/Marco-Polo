@@ -17,7 +17,7 @@ class PreguntasTableSeeder extends Seeder
 			'pregunta' => 'Hay suficiente dinero para financiar un viaje a la costa este de la galaxia Neymar?',
 			'respondida' => false,
 			'respuesta'=> null,
-			'id_categoria'=>1,
+			'id_categoria'=>3,
 			'id'=>1
 		]);
 		Preguntas::create([
@@ -30,7 +30,7 @@ class PreguntasTableSeeder extends Seeder
 		Preguntas::create([
 			'pregunta' => 'Puedo llamar a casa?',
 			'respondida' => true,
-			'respuesta'=> 'Ño.',
+			'respuesta'=> 'Eh... no.',
 			'id_categoria'=>5,
 			'id'=>3
 		]);
@@ -43,8 +43,8 @@ class PreguntasTableSeeder extends Seeder
 		]);
 		Preguntas::create([
 			'pregunta' => 'Qué necesitaríamos para organizar una fiesta con chicas humanas?',
-			'respondida' => true,
-			'respuesta'=> 'Ño.',
+			'respondida' => false,
+			'respuesta'=> null,
 			'id_categoria'=>4,
 			'id'=>7
 		]);
@@ -57,28 +57,28 @@ class PreguntasTableSeeder extends Seeder
 		]);
 		Preguntas::create([
 			'pregunta' => 'Puedo infiltrarme en la tierra? De disfraz se me ocurre usar un par de anteojos',
-			'respondida' => true,
+			'respondida' => false,
 			'respuesta'=> null,
 			'id_categoria'=>4,
 			'id'=>5
 		]);
 		Preguntas::create([
 			'pregunta' => 'Hay problemas?',
-			'respondida' => true,
+			'respondida' => false,
 			'respuesta'=> null,
 			'id_categoria'=>5,
 			'id'=>2
 		]);
 		Preguntas::create([
 			'pregunta' => 'Si la inflamación no se va, el dolor vuelve?',
-			'respondida' => true,
+			'respondida' => false,
 			'respuesta'=> null,
 			'id_categoria'=>5,
 			'id'=>6
 		]);
 		Preguntas::create([
 			'pregunta' => 'Comprarme un nuevo sable quiero. Hay plata?',
-			'respondida' => true,
+			'respondida' => false,
 			'respuesta'=> null,
 			'id_categoria'=>1,
 			'id'=>4

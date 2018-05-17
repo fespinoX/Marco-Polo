@@ -8,9 +8,12 @@
     <link rel="stylesheet" href="<?= url('css/app.css');?>">
     <link rel="stylesheet" href="<?= url('css/style.css');?>">
     <link rel="stylesheet" href="<?= url('css/fonts/stylesheet.css');?>">
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <h1 class="sr-only">Marco Polo</h1>
       <a class="navbar-brand" href="<?= url('index');?>">MP</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -21,10 +24,10 @@
             <a class="nav-link" href="<?= url('preguntas');?>">Preguntas</a>
           </li>
         </ul>
-        <ul class="nav navbar-nav navbar-right">
+        <ul class="navbar-nav ml-auto">
           @if(Auth::check())
-          <li class="nav-item">
-            <p>{{ Auth::user()->name }} <a class="nav-link" href="{{ route('auth.logout') }}">Desloguame</a></p>
+          <li class="nav-item righty">
+            <p>Hola, {{ Auth::user()->name }}!<a class="nav-link" href="{{ route('auth.logout') }}">Deslogueame</a></p>
             
           </li>
           @else
