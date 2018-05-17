@@ -17,8 +17,8 @@ class PreguntasTableSeeder extends Seeder
 			'pregunta' => 'Hay suficiente dinero para financiar un viaje a la costa este de la galaxia Neymar?',
 			'respondida' => false,
 			'respuesta'=> null,
-			'id_categoria'=>3,
-			'id'=>1
+			'id_categoria'=>1,
+			'id'=>3
 		]);
 		Preguntas::create([
 			'pregunta' => 'Me gustaría crear el ministerio de "No Hay problema" y ser su ministro. Es esto viable?',
