@@ -17,7 +17,7 @@ class Preguntas extends Model
 	
 	/** @var array Los campos que se pueden cargar de manera masiva */
 	//De esta forma evito que me mande campos indeseados
-    protected $fillable = ['pregunta', 'respuesta', 'id_categoria', 'id'];
+    protected $fillable = ['pregunta', 'respuesta', 'id_categoria', 'id', 'respondida'];
 	
     //protected $guarded = [];
 	/** @var array reglas de validación */

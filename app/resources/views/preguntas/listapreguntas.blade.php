@@ -8,6 +8,10 @@
 Marco Polo
 @stop
 
+<?php
+//dd(Auth::user()->id_rol);
+?>
+
 @section('contenido')
   <h1>Marco Polo</h1>
   <p>Nomonomnomnomnomnom</p>
@@ -18,7 +22,7 @@ Marco Polo
 @if ($singlePregunta->respondida == false)
 <div>
   <div>
-    <p>{{ $singlePregunta->users->nombre }}</p>
+    <p>{{ $singlePregunta->users->name }}</p>
 
   </div>
   <div>

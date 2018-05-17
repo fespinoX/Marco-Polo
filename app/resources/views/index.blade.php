@@ -16,5 +16,9 @@ Marco Polo
     <h1>Marco Polo</h1>
     <p>Esta es la vista pelada</p>
 
+@if(Auth::check()) 
+@if(Auth::user()->id_rol == 2)  
     <a class="nav-link" href="<?= url('preguntas/nueva');?>">Nueva pregunta</a>
+@endif
+@endif
 @stop

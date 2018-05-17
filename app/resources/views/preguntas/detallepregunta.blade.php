@@ -15,4 +15,11 @@ Pregunta {{ $pregunta->pregunta }}
           <p>{{ $pregunta->pregunta }}</p>
     <p>{{ $pregunta->respuesta }}</p>
     <p>{{ $pregunta->categorias->categoria }}</p>
+
+@if(Auth::user()->id_rol == 1)    
+    <a href="<?= route('preguntas.formEditar', ['id' => $pregunta->id_pregunta]);?>">Responder</a>
+
+    <a href="<?= route('preguntas.confirmarEliminar', ['id' => $pregunta->id_pregunta]);?>">Eliminar</a>    
+@endif    
+
 @stop

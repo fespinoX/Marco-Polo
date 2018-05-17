@@ -47,7 +47,14 @@ Route::get('/preguntas', [
 		'as' => 'preguntas.index',
 		'uses' => 'PreguntasController@index'
 	]);
-	
+
+
+
+
+Route::middleware('auth')->group(function() {
+
+
+
 Route::get('/preguntas/nueva', [
 	// 'as' permite definir un nombre a la ruta.
 	// Ese nombre es exclusivamente de uso interno.
@@ -62,3 +69,33 @@ Route::post('/preguntas/nueva', [
 
 Route::get('/preguntas/{id_pregunta}', 'PreguntasController@detallepregunta');
 
+
+
+Route::get('/preguntas/{id}', 'PreguntasController@detallepregunta');
+
+	Route::get('/preguntas/{id}/editar', [
+		'as' => 'preguntas.formEditar',
+		'uses' => 'PreguntasController@formEditar',
+	]);
+
+	// Para usar el verbo put, debemos o;
+	// - Hacer una petición por Ajax usando el verbo.
+	// - En HTML, usar el campo hidden _method de Laravel.
+	Route::put('/preguntas/{id}/editar', [
+		'as' => 'preguntas.editar',
+		'uses' => 'PreguntasController@editar',
+	]);
+
+	Route::get('/preguntas/{id}/eliminar', [
+		'as' => 'preguntas.confirmarEliminar',
+		'uses' => 'PreguntasController@confirmarEliminar',
+	]);
+
+	// Idem delete a put.
+	Route::delete('/preguntas/{id}/eliminar', [
+		'as' => 'preguntas.eliminar',
+		'uses' => 'PreguntasController@eliminar',
+	]);
+
+
+	});

@@ -24,7 +24,7 @@ class UsersTableSeeder extends Seeder
 		]);
 		User::create([
 			'name' => 'Alf',
-			'email' => 'Alf@alf.com',
+			'email' => 'alf@alf.com',
 			'planeta' => 'Melmac',
 			'password' => \Hash::make('123'),
 			'id_rol'=>2
