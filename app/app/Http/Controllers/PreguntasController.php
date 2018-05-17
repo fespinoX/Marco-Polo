@@ -80,13 +80,11 @@ class PreguntasController extends Controller
         $inputData["respondida"] = false;
         //dd($inputData);
 
-
-/*
         $request->validate(Preguntas::$rules, [
             'pregunta.required' => 'La pregunta no puede estar vacía',
             'pregunta.min' => 'Esa pregunta es muy cortita, no seas vago!'
         ]);
-*/
+
         // Creamos la nueva Pregunta.
         Preguntas::create($inputData);
 
